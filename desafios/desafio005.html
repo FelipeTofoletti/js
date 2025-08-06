@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+</head>
+<body>
+    <h1>Trabalhando com números</h1>
+    <button onclick="clicou()" style="font-size: large; width: 300px; height: 100px;cursor: pointer;">Clique para calcular</button>
+    <section id="resultado">O resultado aparecera aqui...</section>
+    <script>
+        function clicou() {
+            var num = Number(window.prompt('Digite um número'))
+            var dob = num * 2
+            var met = num/2
+            var res = window.document.getElementById('resultado')
+            res.innerHTML = (`<P>O dobro de ${num} é ${dob} e a metado é ${met} </P>`)
+        }
+    </script>
+</body>
+</html>

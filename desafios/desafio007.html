@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+</head>
+<body>
+    <h1>Média do aluno v1.0</h1>
+    <button onclick="clicou()" style="font-size: large; width: 300px; height: 100px;cursor: pointer;">Calcular média</button>
+    <section id="resultado">O resultado aparecera aqui...</section>
+    <script>
+        function clicou() {
+            var nome = window.prompt('Qual o nome do aluno:')
+            var n1 = Number(window.prompt('Digite a primeira nota:'))
+            var n2 = Number(window.prompt('Digite a segunda nota:'))
+            var media = (n1 + n2) / 2  
+            var res = window.document.getElementById('resultado')
+            res.innerHTML = `<p>Calculando a média de ${nome}<br>
+            As notas obtidas foram de ${n1} e ${n2}<br>
+            A média foi de ${media}
+            </p>`
+        }
+    </script>
+</body>
+</html>

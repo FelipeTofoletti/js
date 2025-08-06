@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+</head>
+<body>
+    <h1>Somando dois números</h1>
+    <button onclick="clicou()" style="font-size: large; width: 300px; height: 100px;cursor: pointer;">Clique para somar</button>
+    <section id="resultado">O resultado aparecera aqui...</section>
+    <script>
+        function clicou(){
+            var v1 = Number(window.prompt('Digite o primeiro valor:'))
+            var v2 = Number(window.prompt('Digite o segundo valor:'))
+            var soma = v1 + v2
+            var res = window.document.getElementById('resultado')
+            res.innerHTML = `<p>A soma entre ${v1} e ${v2} é igual a ${soma}. </p>`
+        }
+    </script>
+</body>
+</html>

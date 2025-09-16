@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Script</title>
+</head>
+<body>
+    <h1>Estrangeiro ou brasileiro?</h1>
+    Qual pais você esta? <input type="text" name="idpais" id="idpais" autocomplete="off">
+    <input type="button" value="Verificar" onclick="calcular()">
+    <div id="res">
+
+    </div>
+    <script>
+    function calcular(){
+        var pais = document.getElementById('idpais').value.toLowerCase().trim()
+        var res = document.getElementById('res')
+        res.innerHTML =''
+        if (pais == 'brasil'){
+            res.innerHTML += `Você é Brasileiro(a)!!!`
+        } else {
+            res.innerHTML += `Você é estrangeiro(a)!!!`
+        }
+    }    
+</script>
+</body>
+</html>

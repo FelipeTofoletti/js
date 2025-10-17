@@ -1,10 +1,29 @@
 function contar() {
-    let n1 = Number(document.getElementById('n1').value)
-    let n2 = Number(document.getElementById('n2').value)
-    let passo = Number(window.document.getElementById('passo').value)
+    let ini = document.getElementById('txti')
+    let fim = document.getElementById('txtf')
+    let passo = document.getElementById('txtp')
+    let res = document.getElementById('res')
 
-    do {
-        document.getElementById("contador").innerHTML = `${n1}`
-        n1++
-    } while (n1 >= n2)
-}
+    if (ini.value.length == 0 || fim.value.length == 0 || passo.value.length == 0){
+        window.alert("ERRO!!? Faltam dados!!")
+    } else {
+        res.innerHTML = 'Contando: '
+        let i = Number(ini.value)
+        let f = Number(fim.value)
+        let p = Number(passo.value)
+        if ( p <= 0 ){
+            window.alert('Passo invalido! Considerando passo 1')
+            p = 1
+        }
+        if (i < f) {
+            for( let c = i; c <= f; c += p){
+            res.innerHTML += `${c} `
+        }
+        } else {
+            for ( let c = i; c >= f; c -= p) {
+                res.innerHTML += `${c} `
+            }
+        }
+        res.innerHTML += "Fim."
+    }
+} 

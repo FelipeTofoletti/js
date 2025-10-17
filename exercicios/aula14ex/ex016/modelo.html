@@ -8,21 +8,17 @@
 </head>
 <body>
     <header>
-        <h1>Titulo</h1>
+        <h1>CONTADOR</h1>
     </header>
     <section>
-        <div>
-            Contador <br>
-            Numero de partida:
-            <input type="text" name="" id="n1"><br>
-            Numero final:
-            <input type="text" name="" id="n2"><br>
-            Passo:
-            <input type="text" name="" id="passo"><br>
-            <input type="button" value="Contar" onclick="contar()">
+        <div id="dados">
+            <p>Inicio: <input type="number" name="inicio" id="txti"></p>
+            <p>Fim: <input type="number" name="fim" id="txtf"></p>
+            <p>Passo: <input type="number" name="passo" id="txtp"></p>
+            <p><input type="button" value="Contar" onclick="contar()"></p>
         </div>
-        <div id="contador">
-            Contando...
+        <div id="res">
+            Preparando a contagem...
         </div>
     </section>
     <footer>
